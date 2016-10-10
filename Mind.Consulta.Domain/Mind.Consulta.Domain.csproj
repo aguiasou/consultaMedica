@@ -51,7 +51,14 @@
     <Compile Include="BusinessObject\Pessoa.cs" />
     <Compile Include="BusinessObject\PessoaFisica.cs" />
     <Compile Include="IRepositories\IBeneficiarioRespository.cs" />
+    <Compile Include="IRepositories\ICidadeRespository.cs" />
     <Compile Include="IRepositories\IConsultaRespository.cs" />
+    <Compile Include="IRepositories\IEnderecoRepository.cs" />
+    <Compile Include="IRepositories\IEspecialidadeRepository.cs" />
+    <Compile Include="IRepositories\IEstadoRepository.cs" />
+    <Compile Include="IRepositories\IMedicoRepository.cs" />
+    <Compile Include="IRepositories\IPessoaFisicaRepository.cs" />
+    <Compile Include="IRepositories\IPessoaRespository.cs" />
     <Compile Include="IRepositories\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ServicoMarcarConsulta.cs" />

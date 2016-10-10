@@ -30,8 +30,8 @@ namespace Mind.Consulta.Domain.Services
 
         public async Task MarcarConsulta(Consulta.Domain.BusinessObject.Consulta consulta)
         {
-            if ((await this.IsConsultaExists(consulta)) == true)
-                throw new BusinessException("Existe consulta marcada no intervalo informado.");
+            if ((await this.IsConsultaExists(consulta)))
+                throw new BusinessException("Existe consulta marcada no período informado. Necessário respeitar o intervalo de 30 minutos entre as consultas.");
 
             await consultaRepository.Save(consulta);
         }

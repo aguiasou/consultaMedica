@@ -12,7 +12,6 @@ namespace Mind.Consulta.Domain.IRepositories
         Task<IEnumerable<TEntity>> FindAll();
         Task Save(TEntity entity);
         Task<IQueryable<TEntity>> Find(Expression<Func<TEntity, bool>> func);
-        Task<bool> Any(Expression<Func<TEntity, bool>> func);
 
     }
 
