@@ -15,10 +15,10 @@ namespace Mind.Consulta.Test.Spec
         public void DeveIndicarSeEhResponsavel()
         {
             //Arrange
-            var beneficiario = new Beneficiario();
-            beneficiario.DataNascimento = DateTime.Now.AddYears(-19);
-
-            var idade = DateTime.Now.Subtract(beneficiario.DataNascimento).TotalDays / 365;
+            var beneficiario = new Beneficiario
+            {
+                DataNascimento = DateTime.Now.AddYears(-19)
+            };
 
             //Action
             var isResponsavel = beneficiario.IsResponsavel;
@@ -32,11 +32,13 @@ namespace Mind.Consulta.Test.Spec
         public void DeveIndicarSeNaoEhResponsavel()
         {
             //Arrange
-            var beneficiario = new Beneficiario();
-            beneficiario.DataNascimento = DateTime.Now.AddYears(-10);
-
+            var beneficiario = new Beneficiario
+            {
+                DataNascimento = DateTime.Now.AddYears(-10)
+            };
+    
             //Action
-            var isResponsavel = beneficiario.IsResponsavel;
+        var isResponsavel = beneficiario.IsResponsavel;
 
 
             //Assert
