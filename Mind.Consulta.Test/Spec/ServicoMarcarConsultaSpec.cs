@@ -5,6 +5,7 @@ using Mind.Consulta.Test.Mock;
 using Mind.Consulta.Domain.BusinessObject;
 using System.Threading.Tasks;
 using Mind.Consulta.Domain.IRepositories;
+using Mind.Consulta.Domain.Exception;
 
 namespace Mind.Consulta.Test.Spec
 {
@@ -76,6 +77,27 @@ namespace Mind.Consulta.Test.Spec
             var consultaInserida = this.consultaRepository.Find(c => c.Id == consulta.Id);
             Assert.IsNotNull(consultaInserida);
         }
+
+        //[TestMethod]
+        //public async Task DeveLancarErroAoTentarInserirConsulta()
+        //{
+        //    //Arrange
+        //    var consulta = new Domain.BusinessObject.Consulta
+        //    {
+        //        Id = 4,
+        //        Beneficiario = new Beneficiario { },
+        //        Medico = new Medico { Crm = "123", Nome = "Medico 1" },
+        //        Data = new DateTime(2016, 10, 10, 09, 00, 00)
+        //    };
+
+        //    //Action
+        //    Action marcarConsulta = () => this.servicoMarcarConsulta.MarcarConsulta(consulta);
+
+
+        //    //Assert
+        //    marcarConsulta.Invoke();
+
+        //}
 
     }
 }
