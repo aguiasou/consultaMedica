@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Mock\MockConsultaRepository.cs" />
     <Compile Include="Spec\BeneficiarioSpec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Spec\ServicoMarcarConsultaSpec.cs" />

@@ -61,6 +61,7 @@
     <Compile Include="IRepositories\IPessoaRespository.cs" />
     <Compile Include="IRepositories\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IServicoMarcarConsulta.cs" />
     <Compile Include="Services\ServicoMarcarConsulta.cs" />
   </ItemGroup>
   <ItemGroup />
