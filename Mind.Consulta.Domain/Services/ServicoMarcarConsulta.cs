@@ -1,4 +1,6 @@
 ﻿using Mind.Consulta.Domain.IRepositories;
+using Mind.Consulta.Domain.Exception;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,18 +19,21 @@ namespace Mind.Consulta.Domain.Services
         }
 
 
-        public bool IsConsultaExists(Consulta.Domain.BusinessObject.Consulta consulta)
+        public async Task<bool> IsConsultaExists(Consulta.Domain.BusinessObject.Consulta consulta)
         {
+            var dataInicio = consulta.Data.AddMinutes(-30);
+            var dataFim = consulta.Data.AddMinutes(30);
 
-
-            //var cons = consultaRepository.Find(c=>c.Medico.Id == consulta.Medico.Id 
-            //                                    &&
-            throw new NotImplementedException();
+            var consultaExiste = await consultaRepository.Find(c => c.Data > dataInicio && c.Data < dataFim && c.Medico.Id == consulta.Medico.Id);
+            return consultaExiste.Any();
         }
 
-        public void MarcarConsulta(Consulta.Domain.BusinessObject.Consulta consulta)
+        public async Task MarcarConsulta(Consulta.Domain.BusinessObject.Consulta consulta)
         {
-           
+            if ((await this.IsConsultaExists(consulta)) == true)
+                throw new BusinessException("Existe consulta marcada no intervalo informado.");
+
+            await consultaRepository.Save(consulta);
         }
     }
 }

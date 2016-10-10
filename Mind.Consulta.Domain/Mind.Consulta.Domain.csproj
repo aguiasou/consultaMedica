@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exception\BusinessException.cs" />
     <Compile Include="BusinessObject\Beneficiario.cs" />
     <Compile Include="BusinessObject\Cidade.cs" />
     <Compile Include="BusinessObject\Consulta.cs" />
@@ -49,6 +50,7 @@
     <Compile Include="BusinessObject\Medico.cs" />
     <Compile Include="BusinessObject\Pessoa.cs" />
     <Compile Include="BusinessObject\PessoaFisica.cs" />
+    <Compile Include="IRepositories\IBeneficiarioRespository.cs" />
     <Compile Include="IRepositories\IConsultaRespository.cs" />
     <Compile Include="IRepositories\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

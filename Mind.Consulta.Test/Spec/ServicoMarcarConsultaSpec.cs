@@ -14,7 +14,6 @@ namespace Mind.Consulta.Test.Spec
         [TestMethod]
         public void DeveRetornarVerdadeiroAoVerificarConsulta()
         {
-            var data = DateTime.Now.Subtract(Da
         }
 
         [TestMethod]
