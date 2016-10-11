@@ -50,6 +50,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsultaContext.cs" />
+    <Compile Include="Mapping\BeneficiarioMapping.cs" />
+    <Compile Include="Mapping\CidadeMapping.cs" />
+    <Compile Include="Mapping\ConsultaMapping.cs" />
+    <Compile Include="Mapping\EnderecoMapping.cs" />
+    <Compile Include="Mapping\EspecialidadeMapping.cs" />
+    <Compile Include="Mapping\EstadoMapping.cs" />
+    <Compile Include="Mapping\MedicoMapping.cs" />
+    <Compile Include="Mapping\PessoaFisicaMapping.cs" />
+    <Compile Include="Mapping\PessoaMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BeneficiarioRepository.cs" />
     <Compile Include="Repository\CidadeRepository.cs" />
@@ -72,9 +81,7 @@
       <Name>Mind.Consulta.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Mapping\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
