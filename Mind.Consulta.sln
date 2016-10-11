@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Domain", "Mind.Consulta.Domain\Mind.Consulta.Domain.csproj", "{1ECE5487-32E2-4F03-991F-DEF3F0D7F11D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Test", "Mind.Consulta.Test\Mind.Consulta.Test.csproj", "{77EC2FD8-979F-4751-9BA9-0C2FB01A23A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Infrastructure", "Mind.Consulta.Infrastructure\Mind.Consulta.Infrastructure.csproj", "{DED7A6E5-6220-49C1-9686-4740F915EB52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +23,10 @@ Global
 		{77EC2FD8-979F-4751-9BA9-0C2FB01A23A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77EC2FD8-979F-4751-9BA9-0C2FB01A23A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77EC2FD8-979F-4751-9BA9-0C2FB01A23A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DED7A6E5-6220-49C1-9686-4740F915EB52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DED7A6E5-6220-49C1-9686-4740F915EB52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DED7A6E5-6220-49C1-9686-4740F915EB52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DED7A6E5-6220-49C1-9686-4740F915EB52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
