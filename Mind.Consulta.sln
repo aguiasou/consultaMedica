@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Infrastructur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Util", "Mind.Consulta.Util\Mind.Consulta.Util.csproj", "{A7E92A75-F67A-4765-B1BD-28397E475496}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.TestIntegration", "Mind.Consulta.TestIntegration\Mind.Consulta.TestIntegration.csproj", "{CC93293E-18CB-4202-9392-3DC35EBA44AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Test.Integration", "Mind.Consulta.TestIntegration\Mind.Consulta.Test.Integration.csproj", "{CC93293E-18CB-4202-9392-3DC35EBA44AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

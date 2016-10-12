@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Mind.Consulta.TestIntegration
+namespace Mind.Consulta.Test.Integration
 {
     [TestClass]
     public class UnitTest1
