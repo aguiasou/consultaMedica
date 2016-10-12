@@ -27,5 +27,6 @@ namespace Mind.Consulta.Domain.BusinessObject
             }
         }
 
+        
     }
 }

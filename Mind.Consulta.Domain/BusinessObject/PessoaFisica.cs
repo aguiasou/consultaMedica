@@ -15,5 +15,6 @@ namespace Mind.Consulta.Domain.BusinessObject
 
         public DateTime DataNascimento { get; set; }
 
+
     }
 }
