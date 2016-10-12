@@ -50,6 +50,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Repository\EstadoRepoSpec.cs" />
+    <Compile Include="Repository\MedicoRepoSpec.cs" />
+    <Compile Include="Repository\EspecialidadeRepoSpec.cs" />
+    <Compile Include="Repository\CidadeRespoSpec.cs" />
+    <Compile Include="Repository\ConsultaRepoSpec.cs" />
+    <Compile Include="Repository\EnderecoRepoSpec.cs" />
+    <Compile Include="Repository\BeneficiarioRepoSpec.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
