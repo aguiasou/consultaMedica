@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Mind.Consulta.Test.Integration
 {
     [TestClass]
-    public class UnitTest1
+    public class MedicoRepoSpec
     {
         [TestMethod]
         public void TestMethod1()
