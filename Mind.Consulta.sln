@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Test", "Mind.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Infrastructure", "Mind.Consulta.Infrastructure\Mind.Consulta.Infrastructure.csproj", "{DED7A6E5-6220-49C1-9686-4740F915EB52}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Util", "Mind.Consulta.Util\Mind.Consulta.Util.csproj", "{A7E92A75-F67A-4765-B1BD-28397E475496}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{DED7A6E5-6220-49C1-9686-4740F915EB52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DED7A6E5-6220-49C1-9686-4740F915EB52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DED7A6E5-6220-49C1-9686-4740F915EB52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7E92A75-F67A-4765-B1BD-28397E475496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7E92A75-F67A-4765-B1BD-28397E475496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7E92A75-F67A-4765-B1BD-28397E475496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7E92A75-F67A-4765-B1BD-28397E475496}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

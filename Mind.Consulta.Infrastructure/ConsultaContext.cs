@@ -1,4 +1,5 @@
 ﻿using Mind.Consulta.Domain.BusinessObject;
+using Mind.Consulta.Infrastructure.Mapping;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -13,6 +14,18 @@ namespace Mind.Consulta.Infrastructure
         public ConsultaContext():base("ConsultaDB")
         {
 
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Configurations.Add(new BeneficiarioMapping())
+                                       .Add(new CidadeMapping())
+                                       .Add(new ConsultaMapping())
+                                       .Add(new EspecialidadeMapping())
+                                       .Add(new EstadoMapping())
+                                       .Add(new EnderecoMapping())
+                                       .Add(new MedicoMapping());
         }
 
         public DbSet<Beneficiario> Beneficiarios { get; set; }
