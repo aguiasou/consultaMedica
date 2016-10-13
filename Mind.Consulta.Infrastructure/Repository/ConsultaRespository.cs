@@ -1,7 +1,4 @@
 ﻿using Mind.Consulta.Domain.IRepositories;
-using Mind.Consulta.Infrastructure.Repository;
-
-
 
 namespace Mind.Consulta.Infrastructure.Repository
 {
