@@ -1,9 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Domain", "Mind.Consulta.Domain\Mind.Consulta.Domain.csproj", "{1ECE5487-32E2-4F03-991F-DEF3F0D7F11D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Test", "Mind.Consulta.Test\Mind.Consulta.Test.csproj", "{77EC2FD8-979F-4751-9BA9-0C2FB01A23A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Infrastructure", "Mind.Consulta.Infrastructure\Mind.Consulta.Infrastructure.csproj", "{DED7A6E5-6220-49C1-9686-4740F915EB52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Util", "Mind.Consulta.Util\Mind.Consulta.Util.csproj", "{A7E92A75-F67A-4765-B1BD-28397E475496}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Test.Integration", "Mind.Consulta.TestIntegration\Mind.Consulta.Test.Integration.csproj", "{CC93293E-18CB-4202-9392-3DC35EBA44AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +27,18 @@ Global
 		{77EC2FD8-979F-4751-9BA9-0C2FB01A23A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77EC2FD8-979F-4751-9BA9-0C2FB01A23A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77EC2FD8-979F-4751-9BA9-0C2FB01A23A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DED7A6E5-6220-49C1-9686-4740F915EB52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DED7A6E5-6220-49C1-9686-4740F915EB52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DED7A6E5-6220-49C1-9686-4740F915EB52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DED7A6E5-6220-49C1-9686-4740F915EB52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7E92A75-F67A-4765-B1BD-28397E475496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7E92A75-F67A-4765-B1BD-28397E475496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7E92A75-F67A-4765-B1BD-28397E475496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7E92A75-F67A-4765-B1BD-28397E475496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC93293E-18CB-4202-9392-3DC35EBA44AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC93293E-18CB-4202-9392-3DC35EBA44AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC93293E-18CB-4202-9392-3DC35EBA44AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC93293E-18CB-4202-9392-3DC35EBA44AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

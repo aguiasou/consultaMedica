@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{77EC2FD8-979F-4751-9BA9-0C2FB01A23A6}</ProjectGuid>
+    <ProjectGuid>{CC93293E-18CB-4202-9392-3DC35EBA44AB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mind.Consulta.Test</RootNamespace>
-    <AssemblyName>Mind.Consulta.Test</AssemblyName>
+    <RootNamespace>Mind.Consulta.Test.Integration</RootNamespace>
+    <AssemblyName>Mind.Consulta.Test.Integration</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -16,7 +16,6 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,21 +50,16 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Mock\MockConsultaRepository.cs" />
-    <Compile Include="Spec\BeneficiarioSpec.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Spec\ServicoMarcarConsultaSpec.cs" />
+    <Compile Include="Repository\EstadoRepoSpec.cs" />
+    <Compile Include="Repository\MedicoRepoSpec.cs" />
+    <Compile Include="Repository\EspecialidadeRepoSpec.cs" />
+    <Compile Include="Repository\CidadeRespoSpec.cs" />
+    <Compile Include="Repository\ConsultaRepoSpec.cs" />
+    <Compile Include="Repository\EnderecoRepoSpec.cs" />
+    <Compile Include="Repository\BeneficiarioRepoSpec.cs" />
+    <Compile Include="Services\UnitTest1.cs" />
     <Compile Include="UnitTest1.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Mind.Consulta.Domain\Mind.Consulta.Domain.csproj">
-      <Project>{1ece5487-32e2-4f03-991f-def3f0d7f11d}</Project>
-      <Name>Mind.Consulta.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Mind.Consulta.Util\Mind.Consulta.Util.csproj">
-      <Project>{a7e92a75-f67a-4765-b1bd-28397e475496}</Project>
-      <Name>Mind.Consulta.Util</Name>
-    </ProjectReference>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

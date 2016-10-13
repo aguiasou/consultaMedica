@@ -9,5 +9,10 @@ namespace Mind.Consulta.Domain.BusinessObject
     public abstract class Entidade
     {
         public long Id { get; set; }
+
+        public Entidade()
+        {
+
+        }
     }
 }

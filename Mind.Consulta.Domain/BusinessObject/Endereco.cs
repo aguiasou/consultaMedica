@@ -9,7 +9,13 @@ namespace Mind.Consulta.Domain.BusinessObject
     public class Endereco : Entidade
     {
         public virtual Cidade Cidade { get; set; }
+        public long CidadeId { get; set; }
         public string Complemento { get; set; }
+
+        public Endereco()
+        {
+
+        }
 
     }
 }

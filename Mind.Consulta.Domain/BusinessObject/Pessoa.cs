@@ -11,6 +11,13 @@ namespace Mind.Consulta.Domain.BusinessObject
         public string Nome { get; set; }
         
         public Endereco Endereco { get; set; }
-       
+
+        public long EnderecoId { get; set; }
+
+        public Pessoa()
+        {
+
+        }
+
     }
 }

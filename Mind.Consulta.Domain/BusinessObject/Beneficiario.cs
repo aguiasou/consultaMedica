@@ -27,5 +27,10 @@ namespace Mind.Consulta.Domain.BusinessObject
             }
         }
 
+        public Beneficiario()
+        {
+
+        }
+        
     }
 }
