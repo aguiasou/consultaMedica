@@ -3,7 +3,7 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace Mind.Consulta.Infrastructure.Mapping
 {
-    public class EstadoMapping : MappingEntity<Estado>
+    public class EstadoMapping : EntityTypeConfiguration<Estado>
     {
         public EstadoMapping()
         {

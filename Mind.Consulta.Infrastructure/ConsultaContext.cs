@@ -4,11 +4,12 @@ using Mind.Consulta.Util.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using Mind.Consulta.Util;
+
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity.ModelConfiguration;
 
 namespace Mind.Consulta.Infrastructure
 {
@@ -23,9 +24,9 @@ namespace Mind.Consulta.Infrastructure
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            var mapping = typeof(MappingEntity<Entidade>);
-            var instances = mapping.FindInstances(mapping.Namespace);
-            instances.Select(i => modelBuilder.Configurations.Add((MappingEntity<Entidade>)i));
+            var mapping = new BeneficiarioMapping();
+            var instances = mapping.FindInstancesByNamespace(mapping.GetType().Namespace);
+            instances.Select(i => modelBuilder.Configurations.Add((EntityTypeConfiguration<Entidade>)i));
             //modelBuilder.Configurations.Add(new BeneficiarioMapping())
             //                           .Add(new CidadeMapping())
             //                           .Add(new ConsultaMapping())

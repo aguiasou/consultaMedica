@@ -3,7 +3,7 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace Mind.Consulta.Infrastructure.Mapping
 {
-    public class CidadeMapping : MappingEntity<Cidade>
+    public class CidadeMapping : EntityTypeConfiguration<Cidade>
     {
         public CidadeMapping()
         {

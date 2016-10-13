@@ -1,5 +1,6 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Mind.Consulta.Infrastructure.Mapping;
+using Mind.Consulta.Util.Extensions;
 
 namespace Mind.Consulta.Test.Integration
 {
@@ -9,6 +10,15 @@ namespace Mind.Consulta.Test.Integration
         [TestMethod]
         public void TestMethod1()
         {
+            var mapping = new BeneficiarioMapping();
+            var instances = mapping.FindInstancesByNamespace(mapping.GetType().Namespace);
+
+
+
+            foreach (var item in instances)
+            {
+
+            }
         }
     }
 }

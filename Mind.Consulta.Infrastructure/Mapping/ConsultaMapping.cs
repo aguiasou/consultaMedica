@@ -2,7 +2,7 @@
 
 namespace Mind.Consulta.Infrastructure.Mapping
 {
-    public class ConsultaMapping : MappingEntity<Consulta.Domain.BusinessObject.Consulta>
+    public class ConsultaMapping : EntityTypeConfiguration<Consulta.Domain.BusinessObject.Consulta>
     {
         public ConsultaMapping()
         {

@@ -3,7 +3,7 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace Mind.Consulta.Infrastructure.Mapping
 {
-    public class MedicoMapping: MappingEntity<Medico>
+    public class MedicoMapping: EntityTypeConfiguration<Medico>
     {
         public MedicoMapping()
         {

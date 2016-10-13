@@ -4,7 +4,7 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace Mind.Consulta.Infrastructure.Mapping
 {
-    public class BeneficiarioMapping:MappingEntity<Beneficiario>
+    public class BeneficiarioMapping: EntityTypeConfiguration<Beneficiario>
     {
         public BeneficiarioMapping()
         {
