@@ -8,7 +8,22 @@ namespace Mind.Consulta.Test.Integration
 
     {
         [TestMethod]
-        public void TestMethod1()
+        public void DeveInserirNoBanco()
+        {
+        }
+
+        [TestMethod]
+        public void DeveLerRegistroNoBanco()
+        {
+        }
+
+        [TestMethod]
+        public void DeveAtualizarRegistroNoBanco()
+        {
+        }
+
+        [TestMethod]
+        public void DeveDeletarRegistroNoBanco()
         {
         }
     }
