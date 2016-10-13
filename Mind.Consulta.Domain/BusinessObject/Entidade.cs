@@ -10,9 +10,5 @@ namespace Mind.Consulta.Domain.BusinessObject
     {
         public long Id { get; set; }
 
-        public Entidade()
-        {
-
-        }
     }
 }

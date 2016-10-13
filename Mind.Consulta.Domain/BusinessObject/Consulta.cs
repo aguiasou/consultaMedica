@@ -14,9 +14,5 @@ namespace Mind.Consulta.Domain.BusinessObject
         public int MedicoId { get; set; }
         public int BeneficiarioId { get; set; }
 
-        public Consulta()
-        {
-
-        }
     }
 }

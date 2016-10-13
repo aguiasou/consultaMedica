@@ -4,6 +4,7 @@ using Mind.Consulta.Infrastructure.Repository;
 using Mind.Consulta.Domain.BusinessObject;
 using Mind.Consulta.Domain.IRepositories;
 using System.Threading.Tasks;
+using Mind.Consulta.Infrastructure;
 
 namespace Mind.Consulta.Test.Integration
 {
@@ -14,8 +15,8 @@ namespace Mind.Consulta.Test.Integration
 
         public BeneficiarioRepoSpec()
         {
-
-            //this.beneficiarioRepository = new BeneficiarioRepository();
+            var contexto = new ConsultaContext();
+            this.beneficiarioRepository = new BeneficiarioRepository(contexto);
         }
 
         [TestMethod]

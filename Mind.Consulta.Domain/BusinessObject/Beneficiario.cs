@@ -26,11 +26,6 @@ namespace Mind.Consulta.Domain.BusinessObject
                 return this.Idade > MAIORIDADE;
             }
         }
-
-        public Beneficiario()
-        {
-
-        }
         
     }
 }

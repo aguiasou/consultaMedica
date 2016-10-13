@@ -13,9 +13,5 @@ namespace Mind.Consulta.Domain.BusinessObject
         public virtual Estado Estado { get; set; }
         public int EstadoId { get; set; }
 
-        public Cidade()
-        {
-
-        }
     }
 }

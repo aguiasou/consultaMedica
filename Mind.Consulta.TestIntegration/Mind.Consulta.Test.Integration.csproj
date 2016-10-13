@@ -59,7 +59,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="IntegrationContext.cs" />
     <Compile Include="Repository\EstadoRepoSpec.cs" />
     <Compile Include="Repository\MedicoRepoSpec.cs" />
     <Compile Include="Repository\EspecialidadeRepoSpec.cs" />

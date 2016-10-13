@@ -12,10 +12,5 @@ namespace Mind.Consulta.Domain.BusinessObject
         public long CidadeId { get; set; }
         public string Complemento { get; set; }
 
-        public Endereco()
-        {
-
-        }
-
     }
 }

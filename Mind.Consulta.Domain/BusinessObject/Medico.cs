@@ -12,9 +12,5 @@ namespace Mind.Consulta.Domain.BusinessObject
         public Especialidade Especialidade { get; set; }
         public long EspecialidadeId { get; set; }
 
-        public Medico()
-        {
-
-        }
     }
 }
