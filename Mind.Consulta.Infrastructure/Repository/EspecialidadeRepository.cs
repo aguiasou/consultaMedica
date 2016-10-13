@@ -5,6 +5,9 @@ namespace Mind.Consulta.Infrastructure.Repository
 {
     public class EspecialidadeRepository : Repository<Especialidade>, IEspecialidadeRepository
     {
+        public EspecialidadeRepository(ConsultaContext contexto):base(contexto)
+        {
 
+        }
     }
 }

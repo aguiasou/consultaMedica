@@ -12,11 +12,20 @@ namespace Mind.Consulta.Infrastructure.Repository
     public class Repository<TEntity> : IRepository<TEntity>
                                         where TEntity : Entidade
     {
-        private ConsultaContext contexto;
+        private readonly ConsultaContext contexto;
 
-        public Repository()
+        public Repository(ConsultaContext contexto)
         {
-            this.contexto = new ConsultaContext();
+            this.contexto = contexto;
+        }
+
+        public async Task Delete(TEntity entity)
+        {
+            await Task.Factory.StartNew(() =>
+            {
+                this.contexto.Set<TEntity>().Remove(entity);
+                this.contexto.SaveChanges();
+            });
         }
 
         public async Task<IQueryable<TEntity>> Find(Expression<Func<TEntity, bool>> func)

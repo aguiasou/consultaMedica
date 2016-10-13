@@ -6,6 +6,9 @@ namespace Mind.Consulta.Infrastructure.Repository
 {
     public class MedicoRepository : Repository<Medico>, IMedicoRepository
     {
+        public MedicoRepository(ConsultaContext contexto):base(contexto)
+        {
 
+        }
     }
 }

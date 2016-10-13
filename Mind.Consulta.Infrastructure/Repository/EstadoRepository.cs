@@ -6,5 +6,9 @@ namespace Mind.Consulta.Infrastructure.Repository
 {
     public class EstadoRepository : Repository<Estado>, IEstadoRepository
     {
+        public EstadoRepository(ConsultaContext contexto):base(contexto)
+        {
+
+        }
     }
 }

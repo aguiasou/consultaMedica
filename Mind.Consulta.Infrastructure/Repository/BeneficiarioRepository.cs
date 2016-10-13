@@ -6,5 +6,9 @@ namespace Mind.Consulta.Infrastructure.Repository
 {
     public class BeneficiarioRepository: Repository<Beneficiario>, IBeneficiarioRespository
     {
+        public BeneficiarioRepository(ConsultaContext contexto ):base(contexto)
+        {
+
+        }
     }
 }

@@ -17,8 +17,6 @@ namespace Mind.Consulta.Test.Mock
 
         public MockConsultaRepository()
         {
-            var assemblies = Assembly.GetExecutingAssembly().GetTypes()
-                            .Where(a => a.IsClass && a.Namespace != null && a.Namespace.Contains("Mind.Consulta.Infrastructure.Mapping")).ToList();
             var medico = new Medico { Crm = "123", Nome = "Medico 1" };
             var beneficiario = new Beneficiario { };
 
@@ -32,24 +30,29 @@ namespace Mind.Consulta.Test.Mock
             };
         }
 
-        public Task<IQueryable<Domain.BusinessObject.Consulta>> Find(Expression<Func<Domain.BusinessObject.Consulta, bool>> func)
+        public async Task Delete(Domain.BusinessObject.Consulta entity)
         {
-            return Task.Factory.StartNew(() => this.consultas.AsQueryable().Where(func));
+            await Task.Factory.StartNew(() => this.consultas.Remove(entity));
         }
 
-        public Task<IEnumerable<Domain.BusinessObject.Consulta>> FindAll()
+        public async Task<IQueryable<Domain.BusinessObject.Consulta>> Find(Expression<Func<Domain.BusinessObject.Consulta, bool>> func)
         {
-            return Task.Factory.StartNew(() => this.consultas.AsEnumerable());
+            return await Task.Factory.StartNew(() => this.consultas.AsQueryable().Where(func));
         }
 
-        public Task<Domain.BusinessObject.Consulta> FindById(long id)
+        public async Task<IEnumerable<Domain.BusinessObject.Consulta>> FindAll()
         {
-            return Task.Factory.StartNew(() => this.consultas.FirstOrDefault(x=>x.Id== id));
+            return await Task.Factory.StartNew(() => this.consultas.AsEnumerable());
         }
 
-        public Task Save(Domain.BusinessObject.Consulta entity)
+        public async Task<Domain.BusinessObject.Consulta> FindById(long id)
         {
-            return Task.Factory.StartNew(() => this.consultas.Add(entity));
+            return await Task.Factory.StartNew(() => this.consultas.FirstOrDefault(x=>x.Id== id));
+        }
+
+        public async Task Save(Domain.BusinessObject.Consulta entity)
+        {
+             await Task.Factory.StartNew(() => this.consultas.Add(entity));
         }
     }
 }

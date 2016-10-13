@@ -8,6 +8,9 @@ namespace Mind.Consulta.Infrastructure.Repository
 {
     public class EnderecoRepository : Repository<Endereco>, IEnderecoRepository
     {
+        public EnderecoRepository(ConsultaContext contexto):base(contexto)
+        {
 
+        }
     }
 }

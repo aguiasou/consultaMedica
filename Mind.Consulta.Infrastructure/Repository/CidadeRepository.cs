@@ -10,5 +10,9 @@ namespace Mind.Consulta.Infrastructure.Repository
 {
     public class CidadeRepository : Repository<Cidade>, ICidadeRespository
     {
+        public CidadeRepository(ConsultaContext contexto):base(contexto)
+        {
+
+        }
     }
 }

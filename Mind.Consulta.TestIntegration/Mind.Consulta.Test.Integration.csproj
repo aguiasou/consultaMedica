@@ -61,6 +61,16 @@
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mind.Consulta.Domain\Mind.Consulta.Domain.csproj">
+      <Project>{1ece5487-32e2-4f03-991f-def3f0d7f11d}</Project>
+      <Name>Mind.Consulta.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mind.Consulta.Infrastructure\Mind.Consulta.Infrastructure.csproj">
+      <Project>{DED7A6E5-6220-49C1-9686-4740F915EB52}</Project>
+      <Name>Mind.Consulta.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
