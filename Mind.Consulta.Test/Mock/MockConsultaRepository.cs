@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Mind.Consulta.Domain.BusinessObject;
 using System.Linq.Expressions;
+using System.Reflection;
 
 namespace Mind.Consulta.Test.Mock
 {
@@ -16,6 +17,8 @@ namespace Mind.Consulta.Test.Mock
 
         public MockConsultaRepository()
         {
+            var assemblies = Assembly.GetExecutingAssembly().GetTypes()
+                            .Where(a => a.IsClass && a.Namespace != null && a.Namespace.Contains("Mind.Consulta.Infrastructure.Mapping")).ToList();
             var medico = new Medico { Crm = "123", Nome = "Medico 1" };
             var beneficiario = new Beneficiario { };
 

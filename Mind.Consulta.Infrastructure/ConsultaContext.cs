@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,6 +12,11 @@ namespace Mind.Consulta.Infrastructure
 {
     public class ConsultaContext: DbContext
     {
+        private void GetAssemblies()
+        {
+
+        }
+
         public ConsultaContext():base("ConsultaDB")
         {
 
@@ -19,6 +25,10 @@ namespace Mind.Consulta.Infrastructure
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            var assemblies = Assembly.GetExecutingAssembly().GetTypes()
+                             .Where(a => a.IsClass && a.Namespace != null && a.Namespace.Contains("Mind.Consulta.Infrastructure.Mapping")).ToList();
+
             modelBuilder.Configurations.Add(new BeneficiarioMapping())
                                        .Add(new CidadeMapping())
                                        .Add(new ConsultaMapping())

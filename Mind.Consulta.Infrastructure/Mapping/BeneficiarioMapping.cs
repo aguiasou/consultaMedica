@@ -17,4 +17,7 @@ namespace Mind.Consulta.Infrastructure.Mapping
             HasRequired(m => m.Endereco).WithMany().HasForeignKey(c => c.EnderecoId).WillCascadeOnDelete();
         }
     }
+
+   
 }
+
