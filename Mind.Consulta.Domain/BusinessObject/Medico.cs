@@ -11,5 +11,10 @@ namespace Mind.Consulta.Domain.BusinessObject
         public string Crm { get; set; }
         public Especialidade Especialidade { get; set; }
         public long EspecialidadeId { get; set; }
+
+        public Medico()
+        {
+
+        }
     }
 }

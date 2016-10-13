@@ -1,8 +1,10 @@
 ﻿using Mind.Consulta.Domain.BusinessObject;
 using Mind.Consulta.Infrastructure.Mapping;
+using Mind.Consulta.Util.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using Mind.Consulta.Util;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -12,10 +14,7 @@ namespace Mind.Consulta.Infrastructure
 {
     public class ConsultaContext: DbContext
     {
-        private void GetAssemblies()
-        {
-
-        }
+       
 
         public ConsultaContext():base("ConsultaDB")
         {
@@ -24,11 +23,10 @@ namespace Mind.Consulta.Infrastructure
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            var mapping = typeof(BeneficiarioMapping);
 
-            var assemblies = Assembly.GetExecutingAssembly().GetTypes()
-                             .Where(a => a.IsClass && a.Namespace != null && a.Namespace.Contains("Mind.Consulta.Infrastructure.Mapping")).ToList();
-
+            var instances = mapping.FindInstances(mapping.Namespace);
+            instances.Select(i => modelBuilder.Configurations.Add(i.));
             modelBuilder.Configurations.Add(new BeneficiarioMapping())
                                        .Add(new CidadeMapping())
                                        .Add(new ConsultaMapping())

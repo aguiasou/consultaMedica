@@ -9,9 +9,9 @@ namespace Mind.Consulta.Util.Extensions
 {
     public static class ManageAssemblyExtension
     {
-        public static IEnumerable<object> FindAll(this Type type) 
+        public static IEnumerable<object> FindInstances<T>(this T type, string nameSpace) 
         {
-            return typeof(Type).Assembly.GetTypes().Where(t=>t.IsClass).Select(t => Activator.CreateInstance(t)).ToList();
+            return typeof(T).Assembly.GetTypes().Where(t=>t.IsClass &&  !t.IsAbstract && t.Namespace == nameSpace).Select(t => Activator.CreateInstance(t)).ToList();
         }
     }
 }

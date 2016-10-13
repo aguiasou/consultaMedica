@@ -14,5 +14,10 @@ namespace Mind.Consulta.Domain.BusinessObject
 
         public long EnderecoId { get; set; }
 
+        public Pessoa()
+        {
+
+        }
+
     }
 }

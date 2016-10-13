@@ -8,5 +8,10 @@ namespace Mind.Consulta.Domain.BusinessObject
     public class Especialidade : Entidade
     {
         public string Descricao { get; set; }
+
+        public Especialidade()
+        {
+
+        }
     }
 }

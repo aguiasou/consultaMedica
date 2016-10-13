@@ -16,7 +16,10 @@ namespace Mind.Consulta.Domain.BusinessObject
 
         public IList<Cidade> Cidades { get; set; }
 
+        public Estado()
+        {
 
+        }
 
 
 

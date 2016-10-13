@@ -9,6 +9,7 @@ namespace Mind.Consulta.Test.Integration
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }
