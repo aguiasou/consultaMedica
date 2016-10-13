@@ -3,7 +3,7 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace Mind.Consulta.Infrastructure.Mapping
 {
-    public class EnderecoMapping : EntityTypeConfiguration<Endereco>
+    public class EnderecoMapping : MappingEntity<Endereco>
     {
         public EnderecoMapping()
         {

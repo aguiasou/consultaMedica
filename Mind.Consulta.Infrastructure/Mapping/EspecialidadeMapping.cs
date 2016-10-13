@@ -3,7 +3,7 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace Mind.Consulta.Infrastructure.Mapping
 {
-    public class EspecialidadeMapping : EntityTypeConfiguration<Especialidade>
+    public class EspecialidadeMapping : MappingEntity<Especialidade>
     {
         public EspecialidadeMapping()
         {

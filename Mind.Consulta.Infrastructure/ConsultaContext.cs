@@ -12,28 +12,27 @@ using System.Threading.Tasks;
 
 namespace Mind.Consulta.Infrastructure
 {
-    public class ConsultaContext: DbContext
+    public class ConsultaContext : DbContext
     {
-       
 
-        public ConsultaContext():base("ConsultaDB")
+
+        public ConsultaContext() : base("ConsultaDB")
         {
 
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            var mapping = typeof(BeneficiarioMapping);
-
+            var mapping = typeof(MappingEntity<Entidade>);
             var instances = mapping.FindInstances(mapping.Namespace);
-            instances.Select(i => modelBuilder.Configurations.Add(i.));
-            modelBuilder.Configurations.Add(new BeneficiarioMapping())
-                                       .Add(new CidadeMapping())
-                                       .Add(new ConsultaMapping())
-                                       .Add(new EspecialidadeMapping())
-                                       .Add(new EstadoMapping())
-                                       .Add(new EnderecoMapping())
-                                       .Add(new MedicoMapping());
+            instances.Select(i => modelBuilder.Configurations.Add((MappingEntity<Entidade>)i));
+            //modelBuilder.Configurations.Add(new BeneficiarioMapping())
+            //                           .Add(new CidadeMapping())
+            //                           .Add(new ConsultaMapping())
+            //                           .Add(new EspecialidadeMapping())
+            //                           .Add(new EstadoMapping())
+            //                           .Add(new EnderecoMapping())
+            //                           .Add(new MedicoMapping());
         }
 
         public DbSet<Beneficiario> Beneficiarios { get; set; }
