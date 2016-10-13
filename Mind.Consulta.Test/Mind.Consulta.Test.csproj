@@ -62,10 +62,6 @@
       <Project>{1ece5487-32e2-4f03-991f-def3f0d7f11d}</Project>
       <Name>Mind.Consulta.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Mind.Consulta.Infrastructure\Mind.Consulta.Infrastructure.csproj">
-      <Project>{ded7a6e5-6220-49c1-9686-4740f915eb52}</Project>
-      <Name>Mind.Consulta.Infrastructure</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Mind.Consulta.Util\Mind.Consulta.Util.csproj">
       <Project>{a7e92a75-f67a-4765-b1bd-28397e475496}</Project>
       <Name>Mind.Consulta.Util</Name>
