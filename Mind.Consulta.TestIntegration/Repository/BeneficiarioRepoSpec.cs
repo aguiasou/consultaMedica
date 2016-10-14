@@ -11,81 +11,81 @@ namespace Mind.Consulta.Test.Integration
     [TestClass]
     public class BeneficiarioRepoSpec
     {
-        private readonly IBeneficiarioRespository beneficiarioRepository;
+        //private readonly IBeneficiarioRespository beneficiarioRepository;
 
-        public BeneficiarioRepoSpec()
-        {
-            var contexto = new ConsultaContext();
-            this.beneficiarioRepository = new BeneficiarioRepository(contexto);
-        }
+        //public BeneficiarioRepoSpec()
+        //{
+        //    var contexto = new ConsultaContext();
+        //    this.beneficiarioRepository = new BeneficiarioRepository(contexto);
+        //}
 
-        [TestMethod]
-        public async Task DeveInserirNoBanco()
-        {
-           var beneficiario = new Beneficiario { Nome = "Helaine Cristina de Jesus", Cpf = "11111111111", DataNascimento = new DateTime(1985, 04, 03), NumeroCarteira = "123232", Sexo = "Feminino" };
-           await this.beneficiarioRepository.Save(beneficiario);
+        //[TestMethod]
+        //public async Task DeveInserirNoBanco()
+        //{
+        //   var beneficiario = new Beneficiario { Nome = "Helaine Cristina de Jesus", Cpf = "11111111111", DataNascimento = new DateTime(1985, 04, 03), NumeroCarteira = "123232", Sexo = "Feminino" };
+        //   await this.beneficiarioRepository.Save(beneficiario);
 
-            var beneficiarioInserido = await this.beneficiarioRepository.FindById(beneficiario.Id);
+        //    var beneficiarioInserido = await this.beneficiarioRepository.FindById(beneficiario.Id);
 
-            Assert.IsNotNull(beneficiarioInserido);
-
-
-            Assert.Equals(beneficiario.Id, beneficiarioInserido.Id);
-            Assert.Equals(beneficiario.Nome, beneficiarioInserido.Nome);
-            Assert.Equals(beneficiario.Idade, beneficiarioInserido.Idade);
-            Assert.Equals(beneficiario.Sexo, beneficiarioInserido.Sexo);
-
-        }
-
-        [TestMethod]
-        public async Task DeveLerRegistroNoBanco()
-        {
-            var beneficiario = new Beneficiario { Nome = "Helaine Cristina de Jesus", Cpf = "11111111111", DataNascimento = new DateTime(1985, 04, 03), NumeroCarteira = "123232", Sexo = "Feminino" };
-            await this.beneficiarioRepository.Save(beneficiario);
-
-            var beneficiarioInserido = await this.beneficiarioRepository.FindById(beneficiario.Id);
-
-            Assert.IsNotNull(beneficiarioInserido);
+        //    Assert.IsNotNull(beneficiarioInserido);
 
 
-            Assert.Equals(beneficiario.Id, beneficiarioInserido.Id);
-            Assert.Equals(beneficiario.Nome, beneficiarioInserido.Nome);
-            Assert.Equals(beneficiario.Idade, beneficiarioInserido.Idade);
-            Assert.Equals(beneficiario.Sexo, beneficiarioInserido.Sexo);
-        }
+        //    Assert.Equals(beneficiario.Id, beneficiarioInserido.Id);
+        //    Assert.Equals(beneficiario.Nome, beneficiarioInserido.Nome);
+        //    Assert.Equals(beneficiario.Idade, beneficiarioInserido.Idade);
+        //    Assert.Equals(beneficiario.Sexo, beneficiarioInserido.Sexo);
 
-        [TestMethod]
-        public async Task DeveAtualizarRegistroNoBanco()
-        {
-            var beneficiario = new Beneficiario { Nome = "Helaine Cristina de Jesus", Cpf = "11111111111", DataNascimento = new DateTime(1985, 04, 03), NumeroCarteira = "123232", Sexo = "Feminino" };
-            await this.beneficiarioRepository.Save(beneficiario);
+        //}
 
-            var beneficiarioInserido = await this.beneficiarioRepository.FindById(beneficiario.Id);
+        //[TestMethod]
+        //public async Task DeveLerRegistroNoBanco()
+        //{
+        //    var beneficiario = new Beneficiario { Nome = "Helaine Cristina de Jesus", Cpf = "11111111111", DataNascimento = new DateTime(1985, 04, 03), NumeroCarteira = "123232", Sexo = "Feminino" };
+        //    await this.beneficiarioRepository.Save(beneficiario);
 
-            Assert.IsNotNull(beneficiarioInserido);
+        //    var beneficiarioInserido = await this.beneficiarioRepository.FindById(beneficiario.Id);
 
-
-            Assert.Equals(beneficiario.Id, beneficiarioInserido.Id);
-            Assert.Equals(beneficiario.Nome, beneficiarioInserido.Nome);
-            Assert.Equals(beneficiario.Idade, beneficiarioInserido.Idade);
-            Assert.Equals(beneficiario.Sexo, beneficiarioInserido.Sexo);
-        }
-
-        [TestMethod]
-        public async Task DeveDeletarRegistroNoBanco()
-        {
-            var beneficiario = new Beneficiario { Nome = "Helaine Cristina de Jesus", Cpf = "11111111111", DataNascimento = new DateTime(1985, 04, 03), NumeroCarteira = "123232", Sexo = "Feminino" };
-            await this.beneficiarioRepository.Save(beneficiario);
-
-            var beneficiarioInserido = await this.beneficiarioRepository.FindById(beneficiario.Id);
-
-            Assert.IsNotNull(beneficiarioInserido);
+        //    Assert.IsNotNull(beneficiarioInserido);
 
 
-            Assert.Equals(beneficiario.Id, beneficiarioInserido.Id);
-            Assert.Equals(beneficiario.Nome, beneficiarioInserido.Nome);
-            Assert.Equals(beneficiario.Idade, beneficiarioInserido.Idade);
-            Assert.Equals(beneficiario.Sexo, beneficiarioInserido.Sexo);
-        }
+        //    Assert.Equals(beneficiario.Id, beneficiarioInserido.Id);
+        //    Assert.Equals(beneficiario.Nome, beneficiarioInserido.Nome);
+        //    Assert.Equals(beneficiario.Idade, beneficiarioInserido.Idade);
+        //    Assert.Equals(beneficiario.Sexo, beneficiarioInserido.Sexo);
+        //}
+
+        //[TestMethod]
+        //public async Task DeveAtualizarRegistroNoBanco()
+        //{
+        //    var beneficiario = new Beneficiario { Nome = "Helaine Cristina de Jesus", Cpf = "11111111111", DataNascimento = new DateTime(1985, 04, 03), NumeroCarteira = "123232", Sexo = "Feminino" };
+        //    await this.beneficiarioRepository.Save(beneficiario);
+
+        //    var beneficiarioInserido = await this.beneficiarioRepository.FindById(beneficiario.Id);
+
+        //    Assert.IsNotNull(beneficiarioInserido);
+
+
+        //    Assert.Equals(beneficiario.Id, beneficiarioInserido.Id);
+        //    Assert.Equals(beneficiario.Nome, beneficiarioInserido.Nome);
+        //    Assert.Equals(beneficiario.Idade, beneficiarioInserido.Idade);
+        //    Assert.Equals(beneficiario.Sexo, beneficiarioInserido.Sexo);
+        //}
+
+        //[TestMethod]
+        //public async Task DeveDeletarRegistroNoBanco()
+        //{
+        //    var beneficiario = new Beneficiario { Nome = "Helaine Cristina de Jesus", Cpf = "11111111111", DataNascimento = new DateTime(1985, 04, 03), NumeroCarteira = "123232", Sexo = "Feminino" };
+        //    await this.beneficiarioRepository.Save(beneficiario);
+
+        //    var beneficiarioInserido = await this.beneficiarioRepository.FindById(beneficiario.Id);
+
+        //    Assert.IsNotNull(beneficiarioInserido);
+
+
+        //    Assert.Equals(beneficiario.Id, beneficiarioInserido.Id);
+        //    Assert.Equals(beneficiario.Nome, beneficiarioInserido.Nome);
+        //    Assert.Equals(beneficiario.Idade, beneficiarioInserido.Idade);
+        //    Assert.Equals(beneficiario.Sexo, beneficiarioInserido.Sexo);
+        //}
     }
 }

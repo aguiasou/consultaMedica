@@ -6,10 +6,10 @@ namespace Mind.Consulta.Test.Integration
     [TestClass]
     public class ServicoMarcarConsultaSpec
     {
-        [TestMethod]
-        public void TestMethod1()
-        {
+        //[TestMethod]
+        //public void TestMethod1()
+        //{
 
-        }
+        //}
     }
 }

@@ -11,8 +11,8 @@ namespace Mind.Consulta.Domain.BusinessObject
         public Beneficiario Beneficiario { get; set; }
         public Medico Medico { get; set; }
         public DateTime Data { get; set; }
-        public int MedicoId { get; set; }
-        public int BeneficiarioId { get; set; }
+        public long MedicoId { get; set; }
+        public long BeneficiarioId { get; set; }
 
     }
 }

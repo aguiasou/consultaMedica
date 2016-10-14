@@ -34,12 +34,10 @@ namespace Mind.Consulta.Test.Integration
             Assert.AreEqual(estado.Sigla, estadoInserido.Sigla);
         }
 
-        [TestMethod]
-        public void DeveLerRegistroNoBanco()
-        {
-
-
-        }
+        //[TestMethod]
+        //public void DeveLerRegistroNoBanco()
+        //{
+        //}
 
         //[TestMethod]
         //public void DeveAtualizarRegistroNoBanco()

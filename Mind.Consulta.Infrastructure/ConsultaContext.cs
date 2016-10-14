@@ -24,9 +24,10 @@ namespace Mind.Consulta.Infrastructure
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //var mapping = new BeneficiarioMapping();
-            var instances = typeof(EntityTypeConfiguration<Entidade>).FindInstancesByNamespace();
-            instances.Select(i => modelBuilder.Configurations.Add((EntityTypeConfiguration<Entidade>)i));
+            var instances = typeof(BeneficiarioMapping).GetTypes(t => t.Namespace == typeof(BeneficiarioMapping).Namespace && t.BaseType.GetGenericTypeDefinition() == typeof(EntityTypeConfiguration<>))
+                                                        .GetInstances();
+
+            //instances.Select(i =>  modelBuilder.Configurations.Add((EntityTypeConfiguration<Entidade>)i));
             //modelBuilder.Configurations.Add(new BeneficiarioMapping())
             //                           .Add(new CidadeMapping())
             //                           .Add(new ConsultaMapping())

@@ -10,7 +10,7 @@ namespace Mind.Consulta.Infrastructure.Mapping
             ToTable("Estado");
             HasKey(e => e.Id);
             Property(e => e.Nome);
-            HasMany(e => e.Cidades).WithMany().Map(e => e.MapRightKey("EstadoId"));
+            //HasMany(e => e.Cidades).WithMany().Map(e => e.MapRightKey("EstadoId"));
         }
     }
 }
