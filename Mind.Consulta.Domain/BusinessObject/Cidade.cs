@@ -11,7 +11,7 @@ namespace Mind.Consulta.Domain.BusinessObject
         public virtual string Nome { get; set; }
 
         public virtual Estado Estado { get; set; }
-        public int EstadoId { get; set; }
+        public long EstadoId { get; set; }
 
     }
 }

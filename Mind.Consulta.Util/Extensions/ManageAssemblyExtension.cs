@@ -10,9 +10,14 @@ namespace Mind.Consulta.Util.Extensions
 {
     public static class ManageAssemblyExtension
     {
-        public static IEnumerable<object> FindInstances<T>(this T type, Func<Type, bool> expression) 
+        public static IEnumerable<Type> GetTypes(this Type type, Func<Type, bool> expression)
         {
-            return typeof(T).Assembly.GetTypes().Where(expression).Select(t => Activator.CreateInstance(t)).ToList();
+            return type.Assembly.GetTypes().Where(expression).Select(t => t).ToList();
+        }
+
+        public static IEnumerable<object> GetInstances(this IEnumerable<Type> types)
+        {
+            return types.Select(t => Activator.CreateInstance(t)).ToList();
         }
     }
 }
