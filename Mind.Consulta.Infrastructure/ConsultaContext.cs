@@ -24,10 +24,10 @@ namespace Mind.Consulta.Infrastructure
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            var instances = typeof(BeneficiarioMapping).GetTypes(t => t.Namespace == typeof(BeneficiarioMapping).Namespace && t.BaseType.GetGenericTypeDefinition() == typeof(EntityTypeConfiguration<>))
+            var instances = typeof(EstadoMapping).GetTypes(t => t.BaseType.IsGenericType && t.BaseType.GetGenericTypeDefinition() == typeof(EntityTypeConfiguration<>))
                                                         .GetInstances();
 
-            //instances.Select(i =>  modelBuilder.Configurations.Add((EntityTypeConfiguration<Entidade>)i));
+            instances.Select(i =>  modelBuilder.Configurations.Add((EntityTypeConfiguration<Entidade>)i));
             //modelBuilder.Configurations.Add(new BeneficiarioMapping())
             //                           .Add(new CidadeMapping())
             //                           .Add(new ConsultaMapping())
@@ -37,23 +37,23 @@ namespace Mind.Consulta.Infrastructure
             //                           .Add(new MedicoMapping());
         }
 
-        public DbSet<Beneficiario> Beneficiarios { get; set; }
+        //public DbSet<Beneficiario> Beneficiarios { get; set; }
 
         public DbSet<Cidade> Cidades { get; set; }
 
-        public DbSet<Consulta.Domain.BusinessObject.Consulta> Consultas { get; set; }
+        //public DbSet<Consulta.Domain.BusinessObject.Consulta> Consultas { get; set; }
 
-        public DbSet<Endereco> Enderecos { get; set; }
+        //public DbSet<Endereco> Enderecos { get; set; }
 
         public DbSet<Especialidade> Especialidades { get; set; }
 
         public DbSet<Estado> Estados { get; set; }
 
-        public DbSet<Medico> Medicos { get; set; }
+        //public DbSet<Medico> Medicos { get; set; }
 
-        public DbSet<Pessoa> Pessoas { get; set; }
+        //public DbSet<Pessoa> Pessoas { get; set; }
 
-        public DbSet<PessoaFisica> PessoaFisicas { get; set; }
+        //public DbSet<PessoaFisica> PessoaFisicas { get; set; }
 
 
 

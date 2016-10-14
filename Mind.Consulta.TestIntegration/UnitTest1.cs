@@ -13,7 +13,7 @@ namespace Mind.Consulta.Test.Integration
         [TestMethod]
         public void TestMethod1()
         {
-            var instances = typeof(BeneficiarioMapping).GetTypes(t => t.Namespace == typeof(BeneficiarioMapping).Namespace &&  t.BaseType.GetGenericTypeDefinition() == typeof(EntityTypeConfiguration<>))
+            var instances = typeof(EstadoMapping).GetTypes(t => t.Namespace == typeof(EstadoMapping).Namespace &&  t.BaseType.GetGenericTypeDefinition() == typeof(EntityTypeConfiguration<>))
                                                        .GetInstances();
 
 
