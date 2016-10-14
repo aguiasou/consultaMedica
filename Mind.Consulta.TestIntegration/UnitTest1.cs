@@ -7,18 +7,18 @@ namespace Mind.Consulta.Test.Integration
     [TestClass]
     public class UnitTest1
     {
-        [TestMethod]
-        public void TestMethod1()
-        {
-            var mapping = new BeneficiarioMapping();
-            var instances = mapping.FindInstancesByNamespace(mapping.GetType().Namespace);
+        //[TestMethod]
+        //public void TestMethod1()
+        //{
+        //    //var mapping = new BeneficiarioMapping();
+        //    //var instances = mapping.FindInstancesByNamespace(mapping.GetType().Namespace);
 
 
 
-            foreach (var item in instances)
-            {
+        //    //foreach (var item in instances)
+        //    //{
 
-            }
-        }
+        //    //}
+        //}
     }
 }

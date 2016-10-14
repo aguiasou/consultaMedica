@@ -11,15 +11,15 @@ namespace Mind.Consulta.Test
         [TestMethod]
         public void TestMethod1()
         {
-            var mapping = new Beneficiario();
-            var instances = mapping.FindInstancesByNamespace(mapping.GetType().Namespace);
+            //var mapping = new Beneficiario();
+            //var instances = mapping.FindInstancesByNamespace(mapping.GetType().Namespace);
 
 
 
-            foreach (var item in instances)
-            {
+            //foreach (var item in instances)
+            //{
 
-            }
+            //}
         }
     }
 }

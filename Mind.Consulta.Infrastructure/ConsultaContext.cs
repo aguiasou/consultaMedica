@@ -25,7 +25,7 @@ namespace Mind.Consulta.Infrastructure
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             var mapping = new BeneficiarioMapping();
-            var instances = mapping.FindInstancesByNamespace(mapping.GetType().Namespace);
+            var instances = mapping.FindInstances(t=>t.BaseType is EntityTypeConfiguration<Entidade>);
             instances.Select(i => modelBuilder.Configurations.Add((EntityTypeConfiguration<Entidade>)i));
             //modelBuilder.Configurations.Add(new BeneficiarioMapping())
             //                           .Add(new CidadeMapping())
