@@ -24,16 +24,16 @@ namespace Mind.Consulta.Infrastructure
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            var mapping = new BeneficiarioMapping();
-            var instances = mapping.FindInstances(t=>t.BaseType is EntityTypeConfiguration<Entidade>);
-            instances.Select(i => modelBuilder.Configurations.Add((EntityTypeConfiguration<Entidade>)i));
-            //modelBuilder.Configurations.Add(new BeneficiarioMapping())
-            //                           .Add(new CidadeMapping())
-            //                           .Add(new ConsultaMapping())
-            //                           .Add(new EspecialidadeMapping())
-            //                           .Add(new EstadoMapping())
-            //                           .Add(new EnderecoMapping())
-            //                           .Add(new MedicoMapping());
+            //var mapping = new BeneficiarioMapping();
+            //var instances = typeof(EntityTypeConfiguration<Entidade>).FindInstances(t=>t.BaseType is EntityTypeConfiguration<Entidade>);
+            //instances.Select(i =>  modelBuilder.Configurations.Add((EntityTypeConfiguration<Entidade>)i));
+            modelBuilder.Configurations.Add(new BeneficiarioMapping())
+                                       .Add(new CidadeMapping())
+                                       .Add(new ConsultaMapping())
+                                       .Add(new EspecialidadeMapping())
+                                       .Add(new EstadoMapping())
+                                       .Add(new EnderecoMapping())
+                                       .Add(new MedicoMapping());
         }
 
         public DbSet<Beneficiario> Beneficiarios { get; set; }
