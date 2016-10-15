@@ -10,7 +10,7 @@ namespace Mind.Consulta.Infrastructure.Mapping
             ToTable("Cidade");
             HasKey(e => e.Id);
             Property(c => c.Nome);
-          //  HasRequired(c => c.Estado).WithMany().HasForeignKey(c => c.EstadoId).WillCascadeOnDelete();
+            HasRequired(c => c.Estado).WithMany().HasForeignKey(c => c.EstadoId);
 
 
         }

@@ -57,6 +57,7 @@
     <Compile Include="Mapping\EspecialidadeMapping.cs" />
     <Compile Include="Mapping\EstadoMapping.cs" />
     <Compile Include="Mapping\MedicoMapping.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BeneficiarioRepository.cs" />
     <Compile Include="Repository\CidadeRepository.cs" />
@@ -81,9 +82,7 @@
       <Name>Mind.Consulta.Util</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -10,6 +10,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity.ModelConfiguration;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace Mind.Consulta.Infrastructure
 {
@@ -24,10 +25,7 @@ namespace Mind.Consulta.Infrastructure
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            var instances = typeof(EstadoMapping).GetTypes(t => t.BaseType.IsGenericType && t.BaseType.GetGenericTypeDefinition() == typeof(EntityTypeConfiguration<>))
-                                                        .GetInstances();
-
-            instances.Select(i =>  modelBuilder.Configurations.Add((EntityTypeConfiguration<Entidade>)i));
+            modelBuilder.Configurations.AddFromAssembly(Assembly.GetExecutingAssembly());
             //modelBuilder.Configurations.Add(new BeneficiarioMapping())
             //                           .Add(new CidadeMapping())
             //                           .Add(new ConsultaMapping())
@@ -35,25 +33,23 @@ namespace Mind.Consulta.Infrastructure
             //                           .Add(new EstadoMapping())
             //                           .Add(new EnderecoMapping())
             //                           .Add(new MedicoMapping());
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
         }
 
-        //public DbSet<Beneficiario> Beneficiarios { get; set; }
+        public DbSet<Beneficiario> Beneficiarios { get; set; }
 
         public DbSet<Cidade> Cidades { get; set; }
 
-        //public DbSet<Consulta.Domain.BusinessObject.Consulta> Consultas { get; set; }
+        public DbSet<Consulta.Domain.BusinessObject.Consulta> Consultas { get; set; }
 
-        //public DbSet<Endereco> Enderecos { get; set; }
+        public DbSet<Endereco> Enderecos { get; set; }
 
         public DbSet<Especialidade> Especialidades { get; set; }
 
         public DbSet<Estado> Estados { get; set; }
 
-        //public DbSet<Medico> Medicos { get; set; }
+        public DbSet<Medico> Medicos { get; set; }
 
-        //public DbSet<Pessoa> Pessoas { get; set; }
-
-        //public DbSet<PessoaFisica> PessoaFisicas { get; set; }
 
 
 
