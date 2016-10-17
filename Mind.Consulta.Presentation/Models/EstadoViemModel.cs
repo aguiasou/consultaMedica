@@ -17,8 +17,5 @@ namespace Mind.Consulta.Domain.BusinessObject
         [DisplayName("Sigla")]
         public string Sigla { get; set; }
 
-
-
-
     }
 }
