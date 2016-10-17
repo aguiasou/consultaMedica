@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Web.Mvc;
 
 namespace Mind.Consulta.Presentation.Models
 {
@@ -7,10 +8,11 @@ namespace Mind.Consulta.Presentation.Models
         [DisplayName("CRM")]
         public string Crm { get; set; }
 
-        [DisplayName("")]
 
-        public Estado Especialidade { get; set; }
         public long EspecialidadeId { get; set; }
+
+        [DisplayName("Especialidade")]
+        public SelectListItem Especialidades { get; set; }
 
     }
 }
