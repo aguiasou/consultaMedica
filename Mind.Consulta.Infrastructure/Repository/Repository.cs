@@ -73,8 +73,7 @@ namespace Mind.Consulta.Infrastructure.Repository
         {
             await Task.Factory.StartNew(() =>
             {
-                this.contexto.Set<TEntity>().;
-                this.contexto.SaveChanges();
+                this.contexto.Set<TEntity>().RemoveRange(this.contexto.Set<TEntity>().ToList());
             });
         }
     }

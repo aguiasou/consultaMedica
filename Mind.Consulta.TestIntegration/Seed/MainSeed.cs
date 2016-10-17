@@ -25,12 +25,28 @@ namespace Mind.Consulta.Test.Integration.Seed
         public MainSeed(ConsultaContext contexto)
         {
             this.beneficiarioRepository = new BeneficiarioRepository(contexto);
+            beneficiarioRepository.ClearAsync().Wait();
+
+
             this.cidadeRepository = new CidadeRepository(contexto);
+            cidadeRepository.ClearAsync().Wait();
+
             this.consultaRepository = new ConsultaRespository(contexto);
+            consultaRepository.ClearAsync().Wait();
+
+
             this.enderecoRepository = new EnderecoRepository(contexto);
+            enderecoRepository.ClearAsync().Wait();
+
             this.especialidadeRepository = new EspecialidadeRepository(contexto);
+            especialidadeRepository.ClearAsync().Wait();
+
             this.estadoRepository = new EstadoRepository(contexto);
+            estadoRepository.ClearAsync().Wait();
+
             this.medicoRepository = new MedicoRepository(contexto);
+            medicoRepository.ClearAsync().Wait();
+
         }
     }
 }

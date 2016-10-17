@@ -6,6 +6,7 @@ using Mind.Consulta.Domain.BusinessObject;
 using Mind.Consulta.Infrastructure;
 using Mind.Consulta.Infrastructure.Repository;
 using Mind.Consulta.Domain.IRepositories;
+using Mind.Consulta.Test.Integration.Seed;
 
 namespace Mind.Consulta.Test.Integration
 {
@@ -13,10 +14,12 @@ namespace Mind.Consulta.Test.Integration
     public class EspecialidadeRepoSpec
     {
         private readonly IEspecialidadeRepository especialidadeRepository;
+        private readonly MainSeed seed;
 
         public EspecialidadeRepoSpec()
         {
             var contexto = new ConsultaContext();
+            this.seed = new MainSeed(contexto);
             this.especialidadeRepository = new EspecialidadeRepository(contexto);
         }
 

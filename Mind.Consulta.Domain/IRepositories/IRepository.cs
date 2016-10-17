@@ -14,6 +14,8 @@ namespace Mind.Consulta.Domain.IRepositories
         Task<IQueryable<TEntity>> Find(Expression<Func<TEntity, bool>> func);
         Task Delete(TEntity entity);
 
+        Task ClearAsync();
+
     }
 
 }

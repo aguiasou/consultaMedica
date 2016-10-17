@@ -6,6 +6,7 @@ using Mind.Consulta.Infrastructure;
 using Mind.Consulta.Domain.BusinessObject;
 using System.Threading.Tasks;
 using System.Linq;
+using Mind.Consulta.Test.Integration.Seed;
 
 namespace Mind.Consulta.Test.Integration
 {
@@ -14,10 +15,12 @@ namespace Mind.Consulta.Test.Integration
     {
 
         private readonly IEstadoRepository estadoRepository;
+        private readonly MainSeed seed;
 
         public EstadoRepoSpec()
         {
             var contexto = new ConsultaContext();
+            this.seed = new MainSeed(contexto);
             this.estadoRepository = new EstadoRepository(contexto);
         }
 

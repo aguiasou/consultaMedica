@@ -25,9 +25,12 @@ namespace Mind.Consulta.Test.Mock
                 new Domain.BusinessObject.Consulta {  Beneficiario = new Beneficiario(), Medico = medico, Data = new DateTime(2016,10,10,08,00,00) },
                 new Domain.BusinessObject.Consulta {  Beneficiario = new Beneficiario(), Medico = medico, Data = new DateTime(2016,10,10,08,30,00) },
                 new Domain.BusinessObject.Consulta {  Beneficiario = new Beneficiario(), Medico = medico, Data = new DateTime(2016,10,10,09,30,00) },
-
-
             };
+        }
+
+        public Task ClearAsync()
+        {
+            throw new NotImplementedException();
         }
 
         public async Task Delete(Domain.BusinessObject.Consulta entity)
