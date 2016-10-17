@@ -23,7 +23,7 @@ namespace Mind.Consulta.Presentation.Controllers
         // GET: Especialidade
         public async Task<ActionResult> Index()
         {
-            var lista = (await this.especialidadeRepo.FindAll()).Select(e=> new EspecialidadeViewModel(e)).ToList();
+            var lista = (await this.especialidadeRepo.FindAll()).Select(e => new EspecialidadeViewModel(e)).ToList();
             return View(lista);
         }
 
@@ -31,7 +31,7 @@ namespace Mind.Consulta.Presentation.Controllers
         public async Task<ActionResult> Edit(long id)
         {
             var especialidade = await this.especialidadeRepo.FindById(id);
-            return View(especialidade);
+            return View(new EspecialidadeViewModel(especialidade));
         }
 
         public ActionResult Insert()

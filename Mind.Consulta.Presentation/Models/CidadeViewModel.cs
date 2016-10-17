@@ -5,7 +5,7 @@ namespace Mind.Consulta.Presentation.Models
 {
     public class CidadeViewModel 
     {
-        public long CidadeId { get; set; }
+        public long CidadeId { get; private set; }
 
         [DisplayName("Nome")]
         public string Nome { get; set; }
