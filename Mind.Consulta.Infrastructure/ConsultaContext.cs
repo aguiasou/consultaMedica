@@ -37,7 +37,7 @@ namespace Mind.Consulta.Infrastructure
 
         public DbSet<Endereco> Enderecos { get; set; }
 
-        public DbSet<Estado> Especialidades { get; set; }
+        public DbSet<Especialidade> Especialidades { get; set; }
 
         public DbSet<Estado> Estados { get; set; }
 
