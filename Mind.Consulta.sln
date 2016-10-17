@@ -13,10 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Util", "Mind.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Test.Integration", "Mind.Consulta.TestIntegration\Mind.Consulta.Test.Integration.csproj", "{CC93293E-18CB-4202-9392-3DC35EBA44AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Presentation", "Mind.Consulta.Presentation\Mind.Consulta.Presentation.csproj", "{36EBC695-6642-4E9F-BA5C-5295DE88B14C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mind.Consulta.Presentation.Tests", "Mind.Consulta.Presentation.Tests\Mind.Consulta.Presentation.Tests.csproj", "{C90E61AE-97D7-482B-AE8D-77259EB72DA0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,14 +39,6 @@ Global
 		{CC93293E-18CB-4202-9392-3DC35EBA44AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC93293E-18CB-4202-9392-3DC35EBA44AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC93293E-18CB-4202-9392-3DC35EBA44AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36EBC695-6642-4E9F-BA5C-5295DE88B14C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36EBC695-6642-4E9F-BA5C-5295DE88B14C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36EBC695-6642-4E9F-BA5C-5295DE88B14C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36EBC695-6642-4E9F-BA5C-5295DE88B14C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C90E61AE-97D7-482B-AE8D-77259EB72DA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C90E61AE-97D7-482B-AE8D-77259EB72DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C90E61AE-97D7-482B-AE8D-77259EB72DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C90E61AE-97D7-482B-AE8D-77259EB72DA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
