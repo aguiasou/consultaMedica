@@ -9,5 +9,6 @@ namespace Mind.Consulta.Presentation.Controllers
 {
     public class ConsultaController : ApiController
     {
+
     }
 }
