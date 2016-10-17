@@ -16,34 +16,4 @@ namespace Mind.Consulta.Domain.IRepositories
 
     }
 
-    //public class Teste : IRepository<int>       
-    //{
-    //    public Teste()
-    //    {
-    //        var l = new List<int>();
-
-    //        l.First(
-    //    }
-
-    //    public Task<int> FindById(long id)
-    //    {
-    //        throw new NotImplementedException();
-    //    }
-
-    //    public Task<IEnumerable<int>> FindAll()
-    //    {
-    //        throw new NotImplementedException();
-    //    }
-
-    //    public Task Save(int entity)
-    //    {
-    //        throw new NotImplementedException();
-    //    }
-
-    //    public Task<IQueryable<int>> Find(Func<int, bool> func)
-    //    {
-    //        func(
-    //        throw new NotImplementedException();
-    //    }
-    //}
 }

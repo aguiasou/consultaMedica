@@ -26,13 +26,6 @@ namespace Mind.Consulta.Infrastructure
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.AddFromAssembly(Assembly.GetExecutingAssembly());
-            //modelBuilder.Configurations.Add(new BeneficiarioMapping())
-            //                           .Add(new CidadeMapping())
-            //                           .Add(new ConsultaMapping())
-            //                           .Add(new EspecialidadeMapping())
-            //                           .Add(new EstadoMapping())
-            //                           .Add(new EnderecoMapping())
-            //                           .Add(new MedicoMapping());
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
         }
 
@@ -44,7 +37,7 @@ namespace Mind.Consulta.Infrastructure
 
         public DbSet<Endereco> Enderecos { get; set; }
 
-        public DbSet<Especialidade> Especialidades { get; set; }
+        public DbSet<Estado> Especialidades { get; set; }
 
         public DbSet<Estado> Estados { get; set; }
 

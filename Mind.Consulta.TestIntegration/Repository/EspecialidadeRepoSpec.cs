@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 using Mind.Consulta.Domain.BusinessObject;
@@ -32,19 +33,78 @@ namespace Mind.Consulta.Test.Integration
             Assert.AreEqual(especialidadeInserido.Descricao, especialidade.Descricao);
         }
 
-        //[TestMethod]
-        //public void DeveLerRegistroNoBanco()
-        //{
-        //}
 
-        //[TestMethod]
-        //public void DeveAtualizarRegistroNoBanco()
-        //{
-        //}
+        [TestMethod]
+        public async Task DeveAtualizarRegistroNoBanco()
+        {
+            //Arrange
+            var especialidade = new Especialidade { Descricao = "Dermatologista" };
+            await this.especialidadeRepository.Save(especialidade);
 
-        //[TestMethod]
-        //public void DeveDeletarRegistroNoBanco()
-        //{
-        //}
+            var especialidadeAtualizada = await this.especialidadeRepository.FindById(especialidade.Id);
+            especialidadeAtualizada.Descricao = "Ginecologista";
+
+            //Action
+            await this.especialidadeRepository.Save(especialidadeAtualizada);
+
+            //Assert
+            Assert.IsNotNull(especialidadeAtualizada);
+            Assert.AreEqual(especialidadeAtualizada.Id, especialidade.Id);
+            Assert.AreEqual(especialidadeAtualizada.Descricao, "Ginecologista");
+        }
+
+        [TestMethod]
+        public async Task  DeveDeletarRegistroNoBanco()
+        {
+            //Arrange
+            var especialidade = new Especialidade { Descricao = "Urologista" };
+            await this.especialidadeRepository.Save(especialidade);
+
+
+            //Action
+            await this.especialidadeRepository.Delete(especialidade);
+            var especialidadeDeletada =  await this.especialidadeRepository.FindById(especialidade.Id);
+
+            //Assert
+            Assert.IsNull(especialidadeDeletada);
+        }
+
+        [TestMethod]
+        public async Task DeveConsultarRegistroById()
+        {
+            //Arrange
+            var especialidade = new Especialidade { Descricao = "Ortopedista" };
+            await this.especialidadeRepository.Save(especialidade);
+
+
+            //Action
+            var especialidadeConsultada = await this.especialidadeRepository.FindById(especialidade.Id);
+
+
+            //Assert
+            Assert.IsNotNull(especialidadeConsultada);
+            Assert.AreEqual(especialidadeConsultada.Id, especialidade.Id);
+            Assert.AreEqual(especialidadeConsultada.Descricao, especialidade.Descricao);
+        }
+
+        [TestMethod]
+        public async Task DeveConsultarRegistroByDescricao()
+        {
+            //Arrange
+            var especialidade = new Especialidade { Descricao = "Oftalmologista" };
+            await this.especialidadeRepository.Save(especialidade);
+
+
+            //Action
+            var especialidadeConsultada =  (await this.especialidadeRepository.Find(e=>e.Descricao == "Oftalmologista")).FirstOrDefault();
+
+
+            //Assert
+            Assert.IsNotNull(especialidadeConsultada);
+            Assert.AreEqual(especialidadeConsultada.Id, especialidade.Id);
+            Assert.AreEqual(especialidadeConsultada.Descricao, especialidade.Descricao);
+
+        }
+
     }
 }

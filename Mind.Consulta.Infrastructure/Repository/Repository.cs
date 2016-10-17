@@ -44,9 +44,27 @@ namespace Mind.Consulta.Infrastructure.Repository
 
         public async Task Save(TEntity entity)
         {
+            if (entity.Id != default(long))
+                await this.Update(entity);
+            else await this.Insert(entity);
+        }
+
+        private async Task Insert(TEntity entity)
+        {
             await Task.Factory.StartNew(() =>
             {
                 this.contexto.Set<TEntity>().Add(entity);
+                this.contexto.SaveChanges();
+            });
+
+           
+        }
+
+        private async Task Update(TEntity entity)
+        {
+            await Task.Factory.StartNew(() =>
+            {
+                this.contexto.Set<TEntity>().Attach(entity);
                 this.contexto.SaveChanges();
             });
         }

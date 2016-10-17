@@ -66,6 +66,7 @@
     <Compile Include="Repository\ConsultaRepoSpec.cs" />
     <Compile Include="Repository\EnderecoRepoSpec.cs" />
     <Compile Include="Repository\BeneficiarioRepoSpec.cs" />
+    <Compile Include="Seed\MainSeed.cs" />
     <Compile Include="Services\UnitTest1.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
