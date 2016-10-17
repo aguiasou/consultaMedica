@@ -6,24 +6,30 @@ namespace Mind.Consulta.Test.Integration
     [TestClass]
     public class ConsultaRepoSpec
     {
-        //[TestMethod]
-        //public void DeveInserirNoBanco()
-        //{
-        //}
+        public ConsultaRepoSpec()
+        {
 
-        //[TestMethod]
-        //public void DeveLerRegistroNoBanco()
-        //{
-        //}
+        }
 
-        //[TestMethod]
-        //public void DeveAtualizarRegistroNoBanco()
-        //{
-        //}
 
-        //[TestMethod]
-        //public void DeveDeletarRegistroNoBanco()
-        //{
-        //}
+        [TestMethod]
+        public void DeveInserirNoBanco()
+        {
+        }
+
+        [TestMethod]
+        public void DeveLerRegistroNoBanco()
+        {
+        }
+
+        [TestMethod]
+        public void DeveAtualizarRegistroNoBanco()
+        {
+        }
+
+        [TestMethod]
+        public void DeveDeletarRegistroNoBanco()
+        {
+        }
     }
 }

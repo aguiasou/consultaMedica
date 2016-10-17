@@ -68,5 +68,14 @@ namespace Mind.Consulta.Infrastructure.Repository
                 this.contexto.SaveChanges();
             });
         }
+
+        public async Task ClearAsync()
+        {
+            await Task.Factory.StartNew(() =>
+            {
+                this.contexto.Set<TEntity>().;
+                this.contexto.SaveChanges();
+            });
+        }
     }
 }

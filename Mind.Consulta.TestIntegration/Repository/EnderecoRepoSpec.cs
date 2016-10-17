@@ -1,29 +1,54 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Mind.Consulta.Domain.IRepositories;
 
 namespace Mind.Consulta.Test.Integration
 {
     [TestClass]
     public class EnderecoRepoSpec
     {
-        //[TestMethod]
-        //public void DeveInserirNoBanco()
-        //{
-        //}
+        private readonly IEnderecoRepository enderecoRepository;
+        private readonly ICidadeRespository cidadeRepository;
 
-        //[TestMethod]
-        //public void DeveLerRegistroNoBanco()
-        //{
-        //}
 
-        //[TestMethod]
-        //public void DeveAtualizarRegistroNoBanco()
-        //{
-        //}
 
-        //[TestMethod]
-        //public void DeveDeletarRegistroNoBanco()
-        //{
-        //}
+
+        public EnderecoRepoSpec()
+        {
+
+        }
+
+
+        [TestMethod]
+        public void DeveInserirNoBanco()
+        {
+        }
+
+        [TestMethod]
+        public void DeveLerRegistroNoBanco()
+        {
+        }
+
+        [TestMethod]
+        public void DeveAtualizarRegistroNoBanco()
+        {
+        }
+
+        [TestMethod]
+        public void DeveDeletarRegistroNoBanco()
+        {
+        }
+
+        [TestMethod]
+        public void DeveConsultarPorId()
+        {
+        }
+
+        [TestMethod]
+        public void DeveConsultarPorCidade()
+        {
+        }
+
+
     }
 }
