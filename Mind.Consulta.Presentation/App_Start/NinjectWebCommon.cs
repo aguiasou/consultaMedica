@@ -12,6 +12,7 @@ namespace Mind.Consulta.Presentation.App_Start
     using Ninject.Web.Common;
     using Infrastructure.Repository;
     using Domain.IRepositories;
+    using Infrastructure;
 
     public static class NinjectWebCommon 
     {
@@ -63,6 +64,7 @@ namespace Mind.Consulta.Presentation.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<ConsultaContext>().ToSelf().InRequestScope();
             kernel.Bind<IBeneficiarioRespository>().To<BeneficiarioRepository>();
             kernel.Bind<ICidadeRespository>().To<CidadeRepository>();
             kernel.Bind<IConsultaRespository>().To<ConsultaRespository>();
@@ -70,7 +72,6 @@ namespace Mind.Consulta.Presentation.App_Start
             kernel.Bind<IEspecialidadeRepository>().To<EspecialidadeRepository>();
             kernel.Bind<IEstadoRepository>().To<EstadoRepository>();
             kernel.Bind<IMedicoRepository>().To<MedicoRepository>();
-
         }
     }
 }
