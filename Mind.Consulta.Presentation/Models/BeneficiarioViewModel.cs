@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mind.Consulta.Domain.BusinessObject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,27 @@ namespace Mind.Consulta.Presentation.Models
     public class BeneficiarioViewModel: PessoaViewModel
     {
         public string Nome { get; set; }
-        
+
+        public BeneficiarioViewModel()
+        {
+
+        }
+
+        public BeneficiarioViewModel(Beneficiario beneficiario)
+        {
+            this.Nome = beneficiario.Nome;
+            this.Id = beneficiario.Id;
+            this.Endereco = new EnderecoViewModel {
+                    Complemento = beneficiario.Endereco.Complemento,
+                    EnderecoId = beneficiario.EnderecoId,
+                    CidadeId = beneficiario.Id                
+
+            };
+
+
+        }
+
+
+
     }
 }

@@ -11,7 +11,7 @@ namespace Mind.Consulta.Presentation.Models
     public class EnderecoViewModel
     {
 
-        public long EnderecoId { get; private set; }
+        public long EnderecoId { get;  set; }
         public long CidadeId { get; set; }
 
         [DisplayName("Complemento")]

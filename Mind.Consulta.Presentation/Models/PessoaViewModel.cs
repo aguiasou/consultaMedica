@@ -8,7 +8,7 @@ namespace Mind.Consulta.Presentation.Models
 {
     public class PessoaViewModel
     {
-        public long Id { get; private set; }
+        public long Id { get; protected set; }
 
         [DisplayName("Nome")]
         public string Nome { get; set; }
