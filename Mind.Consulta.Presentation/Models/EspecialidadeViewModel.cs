@@ -10,6 +10,9 @@ namespace Mind.Consulta.Presentation.Models
         [DisplayName("Descrição")]
         public string Descricao { get; set; }
 
+
+        [DisplayName("Código")]
+
         public long EspecialidadeId { get; private set; }
 
         #endregion

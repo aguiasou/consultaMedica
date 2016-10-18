@@ -13,7 +13,7 @@ namespace Mind.Consulta.Presentation.App_Start
     using Infrastructure.Repository;
     using Domain.IRepositories;
     using Infrastructure;
-
+    using Domain.Services;
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -72,6 +72,8 @@ namespace Mind.Consulta.Presentation.App_Start
             kernel.Bind<IEspecialidadeRepository>().To<EspecialidadeRepository>();
             kernel.Bind<IEstadoRepository>().To<EstadoRepository>();
             kernel.Bind<IMedicoRepository>().To<MedicoRepository>();
+            kernel.Bind<IServicoMarcarConsulta>().To<ServicoMarcarConsulta>();
+
         }
     }
 }
