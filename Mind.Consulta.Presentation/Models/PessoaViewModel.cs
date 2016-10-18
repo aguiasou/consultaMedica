@@ -12,7 +12,13 @@ namespace Mind.Consulta.Presentation.Models
 
         [DisplayName("Nome")]
         public string Nome { get; set; }
+        [DisplayName("CPF")]
+        public string Cpf { get; set; }
+
         public EnderecoViewModel Endereco { get; set; }
+
+        public String Sexo { get; set; }
+
 
         public int Idade { get; protected set; }
 

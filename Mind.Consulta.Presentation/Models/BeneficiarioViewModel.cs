@@ -38,7 +38,7 @@ namespace Mind.Consulta.Presentation.Models
             };
             this.Idade = beneficiario.Idade;
 
-
+            this.Cpf = beneficiario.Cpf;
 
         }
 
@@ -46,7 +46,15 @@ namespace Mind.Consulta.Presentation.Models
         {
             return new Beneficiario
             {
-                
+                Cpf = this.Cpf,
+                 DataNascimento = this.DataNascimento,
+                 EnderecoId = this.Endereco.EnderecoId,
+                 Endereco = new Domain.BusinessObject.Endereco { Complemento = this.Endereco.Complemento, CidadeId = this.Endereco.CidadeId, Id = this.Endereco.EnderecoId },
+                 Id = this.Id,
+                 Nome = this.Nome,
+                 NumeroCarteira = this.NumeroCarteira,
+                 Sexo = this.Sexo,
+                 
             };
         }
 
