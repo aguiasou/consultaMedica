@@ -267,6 +267,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Beneficiario\" />
+    <Folder Include="Views\Endereco\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

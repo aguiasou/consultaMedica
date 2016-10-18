@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Mind.Consulta.Presentation.Models
 {
@@ -41,6 +42,7 @@ namespace Mind.Consulta.Presentation.Models
 
         [DisplayName("Data Nascimento")]
         public DateTime DataNascimento { get; set; }
+
 
 
     }

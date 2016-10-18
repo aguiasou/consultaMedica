@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Web.Mvc;
 
 namespace Mind.Consulta.Presentation.Models
 {
@@ -23,8 +23,11 @@ namespace Mind.Consulta.Presentation.Models
         private IEnumerable<EstadoViewModel> estados;
         private IEnumerable<CidadeViewModel> cidades;
 
+        public IEnumerable<SelectListItem> Estados { get { return estados.Select(e => new SelectListItem { Text = e.Sigla, Value = e.Id.ToString() }).ToList(); } }
+        public IEnumerable<SelectListItem> Cidades { get { return cidades.Select(c => new SelectListItem { Text = c.Nome, Value = c.CidadeId.ToString() }).ToList(); } }
 
-        public EnderecoViewModel(IEnumerable<EstadoViewModel> estados)
+
+        public EnderecoViewModel(IEnumerable<EstadoViewModel> estados):this()
         {
             this.estados = estados;
         }
@@ -37,6 +40,7 @@ namespace Mind.Consulta.Presentation.Models
         public EnderecoViewModel()
         {
             this.estados = new List<EstadoViewModel>();
+            this.cidades = new List<CidadeViewModel>();
 
         }
 
