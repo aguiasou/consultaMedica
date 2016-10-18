@@ -19,16 +19,16 @@ namespace Mind.Consulta.Presentation.Controllers
         }
 
 
-        // GET: Especialidade
+        // GET: Beneficiario
         //public async Task<ActionResult> Index()
         //{
-          
+
         //}
 
-        // GET: Especialidade
+        // GET: Beneficiario
         //public async Task<ActionResult> Edit(long id)
         //{
-          
+
         //}
 
         //public ActionResult Insert()
@@ -39,7 +39,7 @@ namespace Mind.Consulta.Presentation.Controllers
         //[HttpPost]
         //public async Task<ActionResult> Save(BeneficiarioViewModel beneficiarioViewModel)
         //{
-            
+
         //}
     }
 }

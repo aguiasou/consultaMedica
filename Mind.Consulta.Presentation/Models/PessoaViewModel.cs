@@ -14,5 +14,12 @@ namespace Mind.Consulta.Presentation.Models
         public string Nome { get; set; }
         public EnderecoViewModel Endereco { get; set; }
 
+        public int Idade { get; protected set; }
+
+
+        [DisplayName("Data Nascimento")]
+        public DateTime DataNascimento { get; set; }
+
+
     }
 }
