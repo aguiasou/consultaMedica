@@ -4,8 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace Mind.Consulta.Domain.BusinessObject
+namespace Mind.Consulta.Presentation.Models
 {
     public class EstadoViewModel
     {
@@ -16,6 +15,7 @@ namespace Mind.Consulta.Domain.BusinessObject
 
         [DisplayName("Sigla")]
         public string Sigla { get; set; }
+
 
     }
 }
