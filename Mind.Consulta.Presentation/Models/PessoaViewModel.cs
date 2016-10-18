@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mind.Consulta.Domain.BusinessObject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -20,9 +21,9 @@ namespace Mind.Consulta.Presentation.Models
             this.Endereco = new EnderecoViewModel(estados);
         }
 
-        public PessoaViewModel(IEnumerable<EstadoViewModel> estados, IEnumerable<CidadeViewModel> cidades)
+        public PessoaViewModel(Endereco endereco, IEnumerable<EstadoViewModel> estados, IEnumerable<CidadeViewModel> cidades)
         {
-            this.Endereco = new EnderecoViewModel(estados, cidades);
+            this.Endereco = new EnderecoViewModel(endereco, estados, cidades);
         }
 
         public long Id { get; protected set; }

@@ -29,15 +29,12 @@ namespace Mind.Consulta.Presentation.Models
         }
 
         public MedicoViewModel(Medico medico, IEnumerable<EspecialidadeViewModel> especialidades, IEnumerable<EstadoViewModel> estados, IEnumerable<CidadeViewModel> cidades) :
-                          base(estados, cidades)
+                          base(medico.Endereco, estados, cidades)
         {
             this.Nome = medico.Nome;
             this.Id = medico.Id;
             this.DataNascimento = medico.DataNascimento;
             this.Crm = medico.Crm;
-            this.Endereco.Complemento = medico.Endereco.Complemento;
-            this.Endereco.EnderecoId = medico.EnderecoId;
-            this.Endereco.CidadeId = medico.Id;
             this.EspecialidadeId = medico.EspecialidadeId;
             this.Cpf = medico.Cpf;
 
