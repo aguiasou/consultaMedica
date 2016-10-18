@@ -6,8 +6,24 @@ using System.Web;
 
 namespace Mind.Consulta.Presentation.Models
 {
-    public class PessoaViewModel
+    public abstract class PessoaViewModel
     {
+
+        public PessoaViewModel()
+        {
+            this.Endereco = new EnderecoViewModel();
+        }
+
+        public PessoaViewModel(IEnumerable<EstadoViewModel> estados)
+        {
+            this.Endereco = new EnderecoViewModel(estados);
+        }
+
+        public PessoaViewModel(IEnumerable<EstadoViewModel> estados, IEnumerable<CidadeViewModel> cidades)
+        {
+            this.Endereco = new EnderecoViewModel(estados, cidades);
+        }
+
         public long Id { get; protected set; }
 
         [DisplayName("Nome")]

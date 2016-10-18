@@ -17,35 +17,28 @@ namespace Mind.Consulta.Presentation.Models
 
         private readonly IEnumerable<EspecialidadeViewModel> especialidades;
 
-        public MedicoViewModel()
+        public MedicoViewModel() : base()
         {
             this.especialidades = new List<EspecialidadeViewModel>();
             this.Especialidades = new SelectListItem();
-            this.Endereco = new EnderecoViewModel();
         }
 
-        public MedicoViewModel(IEnumerable<EspecialidadeViewModel> especialidades, IEnumerable<EstadoViewModel> estados) : this()
+        public MedicoViewModel(IEnumerable<EspecialidadeViewModel> especialidades, IEnumerable<EstadoViewModel> estados) : base(estados)
         {
-            this.Endereco = new EnderecoViewModel(estados);
             this.especialidades = especialidades;
         }
 
-        public MedicoViewModel(Medico medico, IEnumerable<EspecialidadeViewModel> especialidades):this()
+        public MedicoViewModel(Medico medico, IEnumerable<EspecialidadeViewModel> especialidades, IEnumerable<EstadoViewModel> estados, IEnumerable<CidadeViewModel> cidades) :
+                          base(estados, cidades)
         {
             this.Nome = medico.Nome;
             this.Id = medico.Id;
             this.DataNascimento = medico.DataNascimento;
             this.Crm = medico.Crm;
-            this.Endereco = new EnderecoViewModel
-            {
-                Complemento = medico.Endereco.Complemento,
-                EnderecoId = medico.EnderecoId,
-                CidadeId = medico.Id
-
-            };
-
+            this.Endereco.Complemento = medico.Endereco.Complemento;
+            this.Endereco.EnderecoId = medico.EnderecoId;
+            this.Endereco.CidadeId = medico.Id;
             this.EspecialidadeId = medico.EspecialidadeId;
-
             this.Cpf = medico.Cpf;
 
         }

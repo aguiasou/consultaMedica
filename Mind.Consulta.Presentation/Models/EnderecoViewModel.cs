@@ -21,10 +21,17 @@ namespace Mind.Consulta.Presentation.Models
         public string Complemento { get; set; }
 
         private IEnumerable<EstadoViewModel> estados;
+        private IEnumerable<CidadeViewModel> cidades;
+
 
         public EnderecoViewModel(IEnumerable<EstadoViewModel> estados)
         {
             this.estados = estados;
+        }
+
+        public EnderecoViewModel(IEnumerable<EstadoViewModel> estados, IEnumerable<CidadeViewModel> cidades):this(estados)
+        {
+            this.cidades = cidades;
         }
 
         public EnderecoViewModel()
