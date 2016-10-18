@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mind.Consulta.Domain.BusinessObject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -16,6 +17,16 @@ namespace Mind.Consulta.Presentation.Models
         [DisplayName("Sigla")]
         public string Sigla { get; set; }
 
+        public EstadoViewModel()
+        {
 
+        }
+
+        public EstadoViewModel(Estado estado)
+        {
+            this.Id = estado.Id;
+            this.Nome = estado.Nome;
+            this.Sigla = estado.Sigla;
+        }
     }
 }

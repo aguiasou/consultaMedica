@@ -189,6 +189,7 @@
     <Compile Include="Controllers\EspecialidadeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MedicoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -264,6 +265,7 @@
     <Content Include="Views\Especialidade\Insert.cshtml" />
     <Content Include="Views\Especialidade\Edit.cshtml" />
     <Content Include="Views\Endereco\EnderecoPartialView.cshtml" />
+    <Content Include="Views\Medico\Insert.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

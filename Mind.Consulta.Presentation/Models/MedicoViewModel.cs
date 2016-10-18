@@ -1,6 +1,8 @@
 ﻿using Mind.Consulta.Domain.BusinessObject;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace Mind.Consulta.Presentation.Models
@@ -10,17 +12,18 @@ namespace Mind.Consulta.Presentation.Models
         [DisplayName("CRM")]
         public string Crm { get; set; }
 
+        [DisplayName("Especialidade")]
+        [Required]
         public long EspecialidadeId { get; set; }
 
-        [DisplayName("Especialidade")]
-        public SelectListItem Especialidades { get; set; }
+
+        public IEnumerable<SelectListItem> Especialidades { get { return especialidades.Select(e => new SelectListItem { Text = e.Descricao, Value = e.EspecialidadeId.ToString() }).ToList(); } }
 
         private readonly IEnumerable<EspecialidadeViewModel> especialidades;
 
         public MedicoViewModel() : base()
         {
             this.especialidades = new List<EspecialidadeViewModel>();
-            this.Especialidades = new SelectListItem();
         }
 
         public MedicoViewModel(IEnumerable<EspecialidadeViewModel> especialidades, IEnumerable<EstadoViewModel> estados) : base(estados)
