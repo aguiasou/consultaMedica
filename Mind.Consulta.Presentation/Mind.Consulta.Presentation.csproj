@@ -261,6 +261,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Especialidade\Index.cshtml" />
     <Content Include="Views\Especialidade\Insert.cshtml" />
+    <Content Include="Views\Especialidade\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
