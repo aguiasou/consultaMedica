@@ -263,11 +263,11 @@
     <Content Include="Views\Especialidade\Index.cshtml" />
     <Content Include="Views\Especialidade\Insert.cshtml" />
     <Content Include="Views\Especialidade\Edit.cshtml" />
+    <Content Include="Views\Endereco\EnderecoPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Beneficiario\" />
-    <Folder Include="Views\Endereco\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

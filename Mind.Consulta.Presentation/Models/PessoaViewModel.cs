@@ -30,6 +30,7 @@ namespace Mind.Consulta.Presentation.Models
 
         [DisplayName("Nome")]
         public string Nome { get; set; }
+
         [DisplayName("CPF")]
         public string Cpf { get; set; }
 
