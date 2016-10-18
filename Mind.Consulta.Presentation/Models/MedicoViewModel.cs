@@ -26,10 +26,11 @@ namespace Mind.Consulta.Presentation.Models
 
         public MedicoViewModel(IEnumerable<EspecialidadeViewModel> especialidades, IEnumerable<EstadoViewModel> estados) : this()
         {
-            this.Endereco.d = endereco;
+            this.Endereco = new EnderecoViewModel(estados);
+            this.especialidades = especialidades;
         }
 
-        public MedicoViewModel(Medico medico, IEnumerable<EspecialidadeViewModel> especialidades, EnderecoViewModel endereco)
+        public MedicoViewModel(Medico medico, IEnumerable<EspecialidadeViewModel> especialidades):this()
         {
             this.Nome = medico.Nome;
             this.Id = medico.Id;
