@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("Upload", "Endereco", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    <div>
+        <input type="file" name="upload"  />
+        <input type="submit" id="salvar" name="salvar"  />
+
+    </div>
+}
+
