@@ -13,6 +13,7 @@ namespace Mind.Consulta.Presentation.Models
     {
 
         public long EnderecoId { get;  set; }
+
         public long CidadeId { get; set; }
         public long EstadoId { get; set; }
 
@@ -32,9 +33,13 @@ namespace Mind.Consulta.Presentation.Models
             this.estados = estados;
         }
 
-        public EnderecoViewModel(IEnumerable<EstadoViewModel> estados, IEnumerable<CidadeViewModel> cidades):this(estados)
+        public EnderecoViewModel(Endereco endereco, IEnumerable<EstadoViewModel> estados, IEnumerable<CidadeViewModel> cidades):this(estados)
         {
+            this.Complemento = endereco.Complemento;
+            this.EstadoId = endereco.Cidade.EstadoId;
+            this.CidadeId = endereco.CidadeId;
             this.cidades = cidades;
+            this.EnderecoId = endereco.Id;
         }
 
         public EnderecoViewModel()
