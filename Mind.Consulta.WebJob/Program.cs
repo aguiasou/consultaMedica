@@ -11,7 +11,9 @@ namespace Mind.Consulta.WebJob
     {
         static void Main(string[] args)
         {
-            //var configuration = new JobHostConfiguration("DefaultEndpointsProtocol=https;AccountName=stgtestehelaine;AccountKey=MQYVCNR0mVkcNdbix3wsTOZCBrhG+/5dXfd9hWRJK8FQ8RCAEkgJ05OEP+rHMRU4TOQwmnbmgoHaMqwauhAbCg==;");
+            var configuration = new JobHostConfiguration("DefaultEndpointsProtocol=https;AccountName=stgtestehelaine;AccountKey=MQYVCNR0mVkcNdbix3wsTOZCBrhG+/5dXfd9hWRJK8FQ8RCAEkgJ05OEP+rHMRU4TOQwmnbmgoHaMqwauhAbCg==;");
+            var host = new JobHost(configuration);
+            host.RunAndBlock();
         }
     }
 }
